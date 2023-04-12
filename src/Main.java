@@ -1,5 +1,6 @@
 // Домашнее задание к семинару №4 JAVA API Супрунов Степан
 
+import tasks.QueueMethods;
 import tasks.ReverseList;
 
 import java.util.LinkedList;
@@ -18,11 +19,13 @@ public class Main {
         thisQueue.add("ехали");
         thisQueue.add("медведи");
         thisQueue.add("на");
-        thisQueue.add("велосипеде");
-        System.out.println("Добавлениие элементов в конец очереди " + thisQueue);
-        System.out.println("Возвращает первый элемент из очереди, не удаляя его " + "[" + thisQueue.peek() + "]");
         System.out.println(thisQueue);
-        System.out.println("Возвращает первый элемент из очереди, и удаляет его " + "[" + thisQueue.poll() + "]");
+        String myString = "велосипеде";
+        QueueMethods.enqueue(thisQueue, myString);
+        System.out.println(thisQueue);
+        QueueMethods.first(thisQueue);
+        System.out.println(thisQueue);
+        QueueMethods.dequeue(thisQueue);
         System.out.println(thisQueue);
     }
 }
